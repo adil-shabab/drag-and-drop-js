@@ -39,4 +39,60 @@ function dragDrop(){
     this.appendChild(draggableTodo)
     console.log('drag drop')
 }
-console.log(all_boxes)
+// console.log(all_boxes)
+
+
+
+let btn = document.querySelector('.submit')
+// console.log(btn)
+
+btn.addEventListener('click', addItem)
+ 
+
+function addItem(e){
+    e.preventDefault()
+    let inputValue = document.querySelector('.input').value
+    if(inputValue != ''){
+        document.querySelector('.input').value = '';
+        todo_div = document.querySelector('.todo-box')
+        console.log(todo_div)
+        div = document.createElement('div')
+        div.className = 'todo d-flex justify-content-between align-items-center'
+        div.setAttribute("draggable", "true")
+        
+        para = document.createElement('p')
+        para.innerHTML = inputValue
+        // console.log(para)
+        
+        div.appendChild(para)
+
+        Itag = document.createElement('i')
+        Itag.className = 'fa-solid fa-trash trash'
+
+        div.appendChild(Itag)
+
+        todo_div.appendChild(div)
+
+        div.addEventListener("dragstart", dragStart)
+        div.addEventListener('dragend', dragEnd)
+
+
+        console.log(div)
+    }
+}
+
+const close_btn = document.querySelectorAll('.trash')
+close_btn.forEach((close)=>{
+    close.addEventListener("click", ()=>{
+        console.log('clicked')
+        close.parentElement.style.display = 'none'
+    })
+    
+})
+console.log(close)
+
+
+{/* <div class="todo d-flex justify-content-between align-items-center" draggable="true">
+<p>Work from Home</p>
+<i class="fa-solid fa-trash"></i>
+</div> */}
