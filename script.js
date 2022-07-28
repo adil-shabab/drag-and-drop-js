@@ -76,6 +76,7 @@ function addItem(e){
         div.addEventListener("dragstart", dragStart)
         div.addEventListener('dragend', dragEnd)
 
+        document.querySelector('.input').focus()
 
         console.log(div)
     }
