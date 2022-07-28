@@ -18,8 +18,38 @@ font-family: 'Righteous', cursive */
 .header h3{
     color: rgb(32, 85, 182);
     font-family: 'Righteous', cursive;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     border-bottom: 1px solid red;
     padding: 0px 35px 10px 35px;
+}
+.todo{
+    border: 1px solid black;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 0px 10px;
+}
+.todo p{
+    padding-top: 10px;
+    font-family: 'Lobster', cursive;
+}
+.todo i{
+    background: #000;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: 0.8s ease;
+}
+.todo i:hover{
+    background: white;
+    color: black;
+}
+input{
+    border-radius: 5px;
+    height: 40px;
+    border: 0.2px solid;
+    width: 250px;
 }
