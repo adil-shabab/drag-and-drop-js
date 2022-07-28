@@ -1,6 +1,8 @@
 const todos = document.querySelectorAll('.todo')
 const all_boxes = document.querySelectorAll('.box')
 let draggableTodo = null
+var close_btn = document.querySelectorAll('.trash')
+
 
 
 todos.forEach((todo)=>{
@@ -67,7 +69,12 @@ function addItem(e){
         div.appendChild(para)
 
         Itag = document.createElement('i')
-        Itag.className = 'fa-solid fa-trash trash'
+        Itag.className = 'trash fa-solid fa-trash'
+        Itag.addEventListener("click", ()=>{
+            console.log('clicked')
+            Itag.parentElement.style.display = 'none'
+            console.log(Itag.parentElement)
+        })
 
         div.appendChild(Itag)
 
@@ -79,11 +86,17 @@ function addItem(e){
         document.querySelector('.input').focus()
 
         console.log(div)
+        // console.log(close_btn)
+        console.log(document.querySelectorAll('.trash'))
+
+        close_btn = document.querySelectorAll('.trash')
+
     }
 }
 
-const close_btn = document.querySelectorAll('.trash')
+// let close_btn = document.querySelectorAll('.trash')
 close_btn.forEach((close)=>{
+    console.log(close_btn)
     close.addEventListener("click", ()=>{
         console.log('clicked')
         close.parentElement.style.display = 'none'
@@ -92,9 +105,11 @@ close_btn.forEach((close)=>{
     
 })
 console.log(close)
+console.log(close_btn)
 
 
 {/* <div class="todo d-flex justify-content-between align-items-center" draggable="true">
 <p>Work from Home</p>
 <i class="fa-solid fa-trash"></i>
 </div> */}
+
