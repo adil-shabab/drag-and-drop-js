@@ -57,7 +57,7 @@ function addItem(e){
         todo_div = document.querySelector('.todo-box')
         console.log(todo_div)
         div = document.createElement('div')
-        div.className = 'todo d-flex justify-content-between align-items-center'
+        div.className = 'todo'
         div.setAttribute("draggable", "true")
         
         para = document.createElement('p')
@@ -87,6 +87,7 @@ close_btn.forEach((close)=>{
     close.addEventListener("click", ()=>{
         console.log('clicked')
         close.parentElement.style.display = 'none'
+        console.log(close.parentElement)
     })
     
 })
