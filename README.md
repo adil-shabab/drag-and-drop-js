@@ -1,5 +1,7 @@
 todo app with drag and drop
 
+just static no databases were used
+
 click here to see website:
 https://todo-drag-and-drop.netlify.app/
 
